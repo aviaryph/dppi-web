@@ -44,7 +44,7 @@ if(isset($_GET['record'])){
 
 if(isset($_POST['create'])){
     $data = array(
-        "storeNo"=>$_POST['storeNo'], 
+        "id"=>$_POST['id'], 
         "clientName"=>$_POST['clientName'], 
         "address"=>utf8_encode($_POST['address']),
         "contact"=>$_POST['contact'],

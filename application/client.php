@@ -105,7 +105,7 @@ include_once '../system/config.php';
 
 <!--begin::modal-->
 <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <form id="createForm" data-parsley-validate="" enctype="multipart/form-data">
                 <div class="modal-header">
@@ -116,7 +116,7 @@ include_once '../system/config.php';
                 </div>
                 <div class="modal-body">
                         
-                              <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
+                              <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="350">
                         <input type="hidden" name="create" />
                         <div class="form-group m-form__group row">
                             <div class="col-md-12">
