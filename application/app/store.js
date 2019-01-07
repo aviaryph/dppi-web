@@ -82,6 +82,7 @@ $(document).ready(function() {
             dataType: "JSON",
             success: function(data)
             {
+
                 console.log(data.chain);
                 $('[name="storeNo"]').val(data.storeNo);
                 $('[name="chain"]').val(data.chain);

@@ -223,6 +223,7 @@ if($value->rowCount()>0) {
                                     <input type="text" class="form-control m-input" placeholder="Enter Office" name="office" required>
                                 </div>
                             </div>
+
                         </div>
                           
                     </div>

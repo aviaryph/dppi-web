@@ -13,10 +13,6 @@ function db_connect(){
     $DB_pass = "dppiapp";
     $DB_name = "u589764813_dppi";
 
-     $DB_host = "localhost";
-    $DB_user = "root";
-    $DB_pass = "";
-    $DB_name = "dppiapp";
     try
     {
         $DB_con = new PDO("mysql:host={$DB_host};dbname={$DB_name}",$DB_user,$DB_pass);
