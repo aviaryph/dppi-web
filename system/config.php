@@ -10,7 +10,7 @@ if(!isset($_SESSION))   {    session_start();   }
 function db_connect(){
     $DB_host = "sql128.main-hosting.eu";
     $DB_user = "u589764813_dppi";
-    $DB_pass = "";
+    $DB_pass = "dppiapp";
     $DB_name = "u589764813_dppi";
     try
     {
