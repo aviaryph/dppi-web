@@ -120,7 +120,7 @@ include_once '../system/config.php';
                     <input type="hidden" name="create" />
                     <div class="form-group m-form__group row">
                         <div class="col-md-12">
-                            <label>Store#</label>
+                            <label>Store #</label>
                             <input type="number" min='0' name="storeNo" class="form-control m-input" placeholder="Enter Store Number" required />
                         </div> 
                     </div>
@@ -203,7 +203,7 @@ if($value->rowCount()>0) {
                     <input type="hidden" name="create" />
                     <div class="form-group m-form__group row">
                         <div class="col-md-12">
-                            <label>Store#</label>
+                            <label>Store #</label>
                             <input type="number" min='0' name="storeNo" class="form-control m-input" placeholder="Enter Store Number" required />
                         </div> 
                     </div>
