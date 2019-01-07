@@ -66,7 +66,7 @@ if(isset($_POST['create'])){
         );
     }
 
-    // echo json_encode($msg);
+     echo json_encode($msg);
 }
 
 if(isset($_POST['update'])){

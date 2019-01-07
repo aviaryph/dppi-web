@@ -82,7 +82,7 @@ $(document).ready(function() {
             dataType: "JSON",
             success: function(data)
             {
-                console.log(data);
+                console.log(data.chain);
                 $('[name="storeNo"]').val(data.storeNo);
                 $('[name="chain"]').val(data.chain);
                 $('[name="branch"]').val(data.branch);
@@ -124,6 +124,8 @@ $(document).ready(function() {
 
     $(".updateForm").on("submit", function (e) { 
         e.preventDefault();
+        var frm = $(".updateForm").serialize();
+        console.log(frm);
         $.ajax({
             type: 'POST',
             url: 'api/store.php',
@@ -132,6 +134,7 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
+                console.log(response);
                 var resp = JSON.parse(response);
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");

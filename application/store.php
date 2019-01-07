@@ -198,36 +198,33 @@ if($value->rowCount()>0) {
                     <div class="modal-body">
                         <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
                             <input type="hidden" name="update" />
-                            <input type="hidden" name="storeNo" value="<?= $r['storeNo']; ?>" />
-                       <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="350">
-                    <input type="hidden" name="create" />
-                    <div class="form-group m-form__group row">
-                        <div class="col-md-12">
-                            <label>Store #</label>
-                            <input type="number" min='0' name="storeNo" class="form-control m-input" placeholder="Enter Store Number" required />
-                        </div> 
-                    </div>
-                     <div class="form-group m-form__group row">
-                        <div class="col-md-12">
-                            <label>Chain</label>
-                            <input type="text" name="chain" class="form-control m-input" placeholder="Enter Chain" required />
-                        </div> 
-                    </div> 
-                    <div class="form-group m-form__group row">
-                        <div class="col-md-12">
-                            <label>Branch</label>
-                            <input type="text" class="form-control m-input" placeholder="Enter Branch" name="branch" required>
+                            <input type="hidden" name="storeNo" />
+                            <div class="form-group m-form__group row">
+                            <div class="col-md-12">
+                                <label>Store #</label>
+                                <input type="number" min='0' name="storeNo" class="form-control m-input" placeholder="Enter Store Number" required />
+                            </div>
                         </div>
-                    </div>
-                     <div class="form-group m-form__group row">
-                        <div class="col-md-12">
-                            <label class="">Office #</label>
-                            <input type="text" class="form-control m-input" placeholder="Enter Office" name="Office" required>
-                        </div> 
-                    </div> 
-                </div>
+                            <div class="form-group m-form__group row">
+                            <div class="col-md-12">
+                                <label>Chain</label>
+                                <input type="text" name="chain" class="form-control m-input" placeholder="Enter Chain" required />
+                            </div>
+                        </div>
+                            <div class="form-group m-form__group row">
+                            <div class="col-md-12">
+                                <label>Branch</label>
+                                <input type="text" class="form-control m-input" placeholder="Enter Branch" name="branch" required>
+                            </div>
+                        </div>
+                            <div class="form-group m-form__group row">
+                            <div class="col-md-12">
+                                <label class="">Office #</label>
+                                <input type="text" class="form-control m-input" placeholder="Enter Office" name="office" required>
+                            </div>
+                        </div>
+                        </div>
                           
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
