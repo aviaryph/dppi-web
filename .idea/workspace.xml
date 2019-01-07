@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3785b047-d96c-4ee9-8f99-79d21be1be60" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/config.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/system/config.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="312">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <caret line="12" column="23" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -208,7 +208,7 @@
       <option name="presentableId" value="Default" />
       <updated>1546855542705</updated>
       <workItem from="1546855547989" duration="3616000" />
-      <workItem from="1546867059946" duration="425000" />
+      <workItem from="1546867059946" duration="773000" />
     </task>
     <task id="LOCAL-00001" summary="chage">
       <created>1546857287343</created>
@@ -224,11 +224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546857581282</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Change Password for config">
+      <created>1546867505414</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546867505414</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4041000" />
+    <option name="totallyTimeSpent" value="4389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -264,7 +271,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chage" />
-    <option name="LAST_COMMIT_MESSAGE" value="chage" />
+    <MESSAGE value="Change Password for config" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change Password for config" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/store.php">
@@ -333,7 +341,7 @@
     <entry file="file://$PROJECT_DIR$/system/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
