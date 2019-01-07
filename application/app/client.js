@@ -95,7 +95,7 @@ $(document).ready(function() {
         });
     });
  
-    $("#createForm").on("submit", function (e) {
+  $("#createForm").on("submit", function (e) {
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -105,18 +105,18 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
-                console.log(response);
                 var resp = JSON.parse(response);
                 toastr.success(resp.Message, resp.title);
                 reload();
                 $('#createForm').trigger("reset");
-                $('#create').modal('hide');  
+                $('#create').modal('hide'); // show bootstrap modal when complete loaded
             },
             error: function(response){
                 var resp = JSON.parse(response);
                 toastr.error(resp.Message, resp.title);
             }
         });
+
     });
 
     $(".updateForm").on("submit", function (e) { 

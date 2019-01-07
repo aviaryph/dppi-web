@@ -1,6 +1,5 @@
 
-$(document).ready(function() {
-
+$(document).ready(function() { 
     //set the toastr options
     toastr.options = {
         "closeButton": true,
@@ -18,9 +17,7 @@ $(document).ready(function() {
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
-    };
-
-
+    }; 
     //set the datatable data
     var table = $('#m_table_1').DataTable({
         responsive: true,
@@ -39,8 +36,7 @@ $(document).ready(function() {
             {mData: 'address'},
             {mData: 'created_at'},
             {mData: 'Actions'}
-        ],
-        "aaSorting": [[3,'desc']],
+        ], 
         columnDefs: [
             {
                 targets: -1,
@@ -56,21 +52,18 @@ $(document).ready(function() {
                                 <a href="#" class="update dropdown-item" data-id="`+ data +`"><i class="la la-edit"></i> Edit Details</a> 
                                 <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#delete`+ data +`"><i class="la la-trash"></i> Delete Details</a>
                                 <a href="#" class="dropdown-item" data-target="#status" data-toggle="modal"><i class="la la-leaf"></i> Update Status</a>
-                      
                             </div>
                         </span> `;
                 },
             }
         ]
-    });
-
+    }); 
 
     //reload the table
     $("#reload").click(function () {
         reload();
     });
-
-
+ 
     //show the create modal form
     $("#createButton").click(function (e) {
         e.preventDefault();
@@ -105,9 +98,7 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
+ 
     //submit the createform when everything is fine
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
@@ -133,8 +124,7 @@ $(document).ready(function() {
 
     });
 
-    $(".updateForm").on("submit", function (e) {
-
+    $(".updateForm").on("submit", function (e) { 
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -148,8 +138,7 @@ $(document).ready(function() {
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");
                 $('#edit').modal('hide'); // show bootstrap modal when complete loaded
-                reload();
-
+                reload(); 
             },
             error: function(response){
                 var resp = JSON.parse(response);
@@ -159,8 +148,7 @@ $(document).ready(function() {
 
     });
 
-    $(".deleteForm").on("submit", function (e) {
-
+    $(".deleteForm").on("submit", function (e) { 
         e.preventDefault();
         $.ajax({
             type: 'POST',
