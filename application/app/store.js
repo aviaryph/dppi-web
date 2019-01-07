@@ -102,7 +102,6 @@ $(document).ready(function() {
  
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
-
         $.ajax({
             type: 'POST',
             url: 'api/store.php',
@@ -111,11 +110,15 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
-                var resp = JSON.parse(response);
-                toastr.success(resp.Message, resp.title);
-                reload();
-                $('#createForm').trigger("reset");
-                $('#create').modal('hide');  
+                if(resp.title == 'Warning'){
+                    toastr.warning(resp.Message, resp.title);
+                }
+                else{
+                    toastr.success(resp.Message, resp.title);
+                    reload();
+                    $('#createForm').trigger("reset");
+                    $('#create').modal('hide');
+                }
             },
             error: function(response){
                 var resp = JSON.parse(response);
