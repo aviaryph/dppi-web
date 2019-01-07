@@ -124,8 +124,6 @@ $(document).ready(function() {
 
     $(".updateForm").on("submit", function (e) { 
         e.preventDefault();
-        var frm = $(".updateForm").serialize();
-        console.log(frm);
         $.ajax({
             type: 'POST',
             url: 'api/store.php',
@@ -134,7 +132,6 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
-                console.log(response);
                 var resp = JSON.parse(response);
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");
