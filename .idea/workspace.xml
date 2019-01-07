@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3785b047-d96c-4ee9-8f99-79d21be1be60" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/system/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/config.php" afterDir="false" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/config.php" afterPath="$PROJECT_DIR$/system/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,9 @@
       <file leaf-file-name="store.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/store.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="123" column="70" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+            <state relative-caret-position="2829">
+              <caret line="123" column="70" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -26,8 +27,9 @@
       <file leaf-file-name="store.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/api/store.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="391">
+              <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -35,8 +37,27 @@
       <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/system/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+            <state relative-caret-position="276">
+              <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+              <folding>
+                <marker date="1546868365385" expanded="true" signature="1853:1896" ph="SELECT COUNT... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="2299:2342" ph="SELECT COUNT... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="2700:2726" ph="SELECT COUNT... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="3087:3134" ph="SELECT ${$co... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="3371:3416" ph="SELECT ${$co... tbl_cms" />
+                <marker date="1546868365385" expanded="true" signature="3644:3724" ph="INSERT INTO tbl_logs... " />
+                <marker date="1546868365385" expanded="true" signature="4325:4360" ph="SELECT ${$da... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="5171:5217" ph="UPDATE ${$ta... " />
+                <marker date="1546868365385" expanded="true" signature="5852:5918" ph="INSERT INTO ${$tableName}... " />
+                <marker date="1546868365385" expanded="true" signature="6437:6466" ph="DELETE FROM " />
+                <marker date="1546868365385" expanded="true" signature="6875:6889" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="7046:7089" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="7231:7262" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="7641:7672" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="7971:8002" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="8380:8411" ph="SELECT * FRO... ${$tableName}" />
+                <marker date="1546868365385" expanded="true" signature="11026:11112" ph="SELECT ${$co... ${$tableName}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,8 +65,9 @@
       <file leaf-file-name="store.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/app/store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3016">
-              <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+            <state relative-caret-position="2668">
+              <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,8 +75,9 @@
       <file leaf-file-name="sub-header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/layouts/sub-header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1820">
-              <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+            <state relative-caret-position="1610">
+              <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -138,11 +161,12 @@
       <path value="$PROJECT_DIR$/public/vendors/wnumb/package.json" />
     </packageJsonPaths>
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="258" />
-    <option name="y" value="145" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -191,6 +215,117 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/system/config.php</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -203,6 +338,9 @@
       </list>
     </option>
   </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -214,7 +352,8 @@
       <option name="presentableId" value="Default" />
       <updated>1546855542705</updated>
       <workItem from="1546855547989" duration="3616000" />
-      <workItem from="1546867059946" duration="1208000" />
+      <workItem from="1546867059946" duration="425000" />
+      <workItem from="1546868006543" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="chage">
       <created>1546857287343</created>
@@ -230,64 +369,26 @@
       <option name="project" value="LOCAL" />
       <updated>1546857581282</updated>
     </task>
-    <task id="LOCAL-00003" summary="Change Password for config">
-      <created>1546867505414</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1546867505414</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Change Password for config">
-      <created>1546867843848</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1546867843848</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Change Password for config">
-      <created>1546867970585</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1546867970585</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Change Password for config">
-      <created>1546868079049</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1546868079049</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4824000" />
+    <option name="totallyTimeSpent" value="4399000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288364" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,21 +399,82 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chage" />
-    <MESSAGE value="Change Password for config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change Password for config" />
+    <option name="LAST_COMMIT_MESSAGE" value="chage" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/store.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2829">
+          <caret line="123" column="70" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/api/store.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/app/store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2668">
+          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/sub-header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1610">
+          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding>
+            <marker date="1546868365385" expanded="true" signature="1853:1896" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="2299:2342" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="2700:2726" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="3087:3134" ph="SELECT ${$co... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="3371:3416" ph="SELECT ${$co... tbl_cms" />
+            <marker date="1546868365385" expanded="true" signature="3644:3724" ph="INSERT INTO tbl_logs... " />
+            <marker date="1546868365385" expanded="true" signature="4325:4360" ph="SELECT ${$da... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="5171:5217" ph="UPDATE ${$ta... " />
+            <marker date="1546868365385" expanded="true" signature="5852:5918" ph="INSERT INTO ${$tableName}... " />
+            <marker date="1546868365385" expanded="true" signature="6437:6466" ph="DELETE FROM " />
+            <marker date="1546868365385" expanded="true" signature="6875:6889" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7046:7089" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7231:7262" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7641:7672" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7971:8002" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="8380:8411" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="11026:11112" ph="SELECT ${$co... ${$tableName}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/store.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3198">
-          <caret line="123" column="70" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+          <caret line="123" column="70" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/store.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1378">
-          <caret line="53" column="7" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="7" />
+          <caret line="53" column="7" lean-forward="false" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -339,36 +501,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/layouts/sub-header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1820">
-          <caret line="70" column="41" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+        <state relative-caret-position="1610">
+          <caret line="70" column="41" lean-forward="false" selection-start-line="70" selection-start-column="41" selection-end-line="70" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/app/store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3016">
-          <caret line="116" column="14" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+        <state relative-caret-position="2668">
+          <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/api/store.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="391">
+          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/store.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="123" column="70" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+        <state relative-caret-position="2829">
+          <caret line="123" column="70" lean-forward="false" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="70" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        <state relative-caret-position="276">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <marker date="1546868365385" expanded="true" signature="1853:1896" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="2299:2342" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="2700:2726" ph="SELECT COUNT... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="3087:3134" ph="SELECT ${$co... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="3371:3416" ph="SELECT ${$co... tbl_cms" />
+            <marker date="1546868365385" expanded="true" signature="3644:3724" ph="INSERT INTO tbl_logs... " />
+            <marker date="1546868365385" expanded="true" signature="4325:4360" ph="SELECT ${$da... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="5171:5217" ph="UPDATE ${$ta... " />
+            <marker date="1546868365385" expanded="true" signature="5852:5918" ph="INSERT INTO ${$tableName}... " />
+            <marker date="1546868365385" expanded="true" signature="6437:6466" ph="DELETE FROM " />
+            <marker date="1546868365385" expanded="true" signature="6875:6889" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7046:7089" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7231:7262" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7641:7672" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="7971:8002" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="8380:8411" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1546868365385" expanded="true" signature="11026:11112" ph="SELECT ${$co... ${$tableName}" />
+          </folding>
         </state>
       </provider>
     </entry>
