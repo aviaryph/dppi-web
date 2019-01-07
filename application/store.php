@@ -139,7 +139,7 @@ include_once '../system/config.php';
                         <div class="form-group m-form__group row">
                             <div class="col-md-12">
                                 <label class="">Office #</label>
-                                <input type="text" class="form-control m-input" placeholder="Enter Office" name="Office" required>
+                                <input type="text" class="form-control m-input" placeholder="Enter Office" name="office" required>
                             </div>
                         </div>
                     </div>

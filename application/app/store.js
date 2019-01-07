@@ -102,6 +102,7 @@ $(document).ready(function() {
  
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
+
         $.ajax({
             type: 'POST',
             url: 'api/store.php',
