@@ -90,40 +90,29 @@ include_once '../system/config.php';
 <div id="m_scroll_top" class="m-scroll-top">
     <i class="la la-arrow-up"></i>
 </div> 
-<!-- end::Scroll Top -->  
+<!-- end::Scroll Top -->
 
-    <!--begin:: Global Mandatory Vendors -->   <?php include_once 'layouts/global.php'; ?>  <!--end:: Global Mandatory Vendors -->
+    <!--begin::modal-->
+    <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <form id="createForm" data-parsley-validate="" enctype="multipart/form-data">
+                    <div class="modal-header">
+                        <h5>Create Client</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
 
-    <!--begin::Page Scripts -->
-    <script src="../public/assets/app/js/dashboard.js" type="text/javascript"></script>
-    <script src="app/client.js" type="text/javascript"></script>
-    <!--end::Page Scripts -->
-</body>
-
-<!-- end::Body -->
-</html> 
-
-<!--begin::modal-->
-<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
-        <div class="modal-content">
-            <form id="createForm" data-parsley-validate="" enctype="multipart/form-data">
-                <div class="modal-header">
-                    <h5>Create Client</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                        
-                              <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="350">
-                        <input type="hidden" name="create" />
-                        <div class="form-group m-form__group row">
-                            <div class="col-md-12">
-                                <label>Name</label>
-                                <input type="text" name="clientName" class="form-control m-input" placeholder="Enter Name" required />
-                            </div> 
-                        </div> 
+                        <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="350">
+                            <input type="hidden" name="create" />
+                            <div class="form-group m-form__group row">
+                                <div class="col-md-12">
+                                    <label>Name</label>
+                                    <input type="text" name="clientName" class="form-control m-input" placeholder="Enter Name" required />
+                                </div>
+                            </div>
                             <div class="form-group m-form__group row">
                                 <div class="col-lg-6">
                                     <label>Contact</label>
@@ -132,7 +121,7 @@ include_once '../system/config.php';
                                 <div class="col-lg-6">
                                     <label class="">TIN #</label>
                                     <input type="text" class="form-control m-input" placeholder="Enter TIN #" name="tinId">
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group m-form__group row">
                                 <div class="col-lg-12">
@@ -142,46 +131,46 @@ include_once '../system/config.php';
                             </div>
                         </div>
                     </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="fa fa-times"></i></span> <span>Cancel</span></button>
-                    <button type="submit" class="btn btn-success"><span><i class="la la-save"></i><span> Save Record</span></span></button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<?php
-$value = custom_query("SELECT * FROM tbl_client ORDER BY id DESC");
-if($value->rowCount()>0) {
-    while ($r = $value->fetch(PDO::FETCH_ASSOC))
-    {
-
-        ?> 
-        <div class="modal fade" id="delete<?= $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <form class="deleteForm" data-parsley-validate="">
-                        <div class="modal-header">
-                            <h5>Delete Record</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="hidden" name="delete" />
-                            <input type="hidden" name="id" value="<?= $r['id']; ?>" />
-                            <h3>Are you sure you want to delete this record?</h3>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
-                            <button type="submit" class="btn btn-danger"><span><i class="la la-trash"></i> </span> <span>Delete</span></button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="fa fa-times"></i></span> <span>Cancel</span></button>
+                        <button type="submit" class="btn btn-success"><span><i class="la la-save"></i><span> Save Record</span></span></button>
+                    </div>
+                </form>
             </div>
         </div>
-    <?php }} ?>
+    </div>
+
+    <?php
+    $value = custom_query("SELECT * FROM tbl_client ORDER BY id DESC");
+    if($value->rowCount()>0) {
+        while ($r = $value->fetch(PDO::FETCH_ASSOC))
+        {
+
+            ?>
+            <div class="modal fade" id="delete<?= $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <form class="deleteForm" data-parsley-validate="">
+                            <div class="modal-header">
+                                <h5>Delete Record</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <input type="hidden" name="delete" />
+                                <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+                                <h3>Are you sure you want to delete this record?</h3>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
+                                <button type="submit" class="btn btn-danger"><span><i class="la la-trash"></i> </span> <span>Delete</span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        <?php }} ?>
 
     <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
@@ -203,7 +192,7 @@ if($value->rowCount()>0) {
                                     <input type="text" name="clientName" class="form-control m-input" placeholder="Enter Client Name" required />
                                 </div>
                             </div>
-                                <div class="form-group m-form__group row">
+                            <div class="form-group m-form__group row">
                                 <div class="col-lg-6">
                                     <label>Contact</label>
                                     <input type="text" class="form-control m-input" placeholder="Enter Contact Number" name="contact" required>
@@ -211,7 +200,7 @@ if($value->rowCount()>0) {
                                 <div class="col-lg-6">
                                     <label class="">TIN #</label>
                                     <input type="text" class="form-control m-input" placeholder="Enter TIN #" name="tinId">
-                                </div> 
+                                </div>
                             </div>
                             <div class="form-group m-form__group row">
                                 <div class="col-lg-12">
@@ -229,3 +218,19 @@ if($value->rowCount()>0) {
             </div>
         </div>
     </div>
+
+
+    <!--begin:: Global Mandatory Vendors -->   <?php include_once 'layouts/global.php'; ?>  <!--end:: Global Mandatory Vendors -->
+
+    <!--begin::Page Scripts -->
+    <script src="../public/assets/app/js/dashboard.js" type="text/javascript"></script>
+    <script src="app/client.js" type="text/javascript"></script>
+    <!--end::Page Scripts -->
+</body>
+
+
+
+<!-- end::Body -->
+</html> 
+
+
