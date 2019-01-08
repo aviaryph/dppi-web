@@ -208,7 +208,7 @@ if($value->rowCount()>0) {
                     <div class="modal-body">
                         <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
                             <input type="hidden" name="update" />
-                            <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+                            <input type="hidden" name="id" />
                             <div class="form-group m-form__group row">
                                 <div class="col-md-6">
                                     <label>Username</label>
