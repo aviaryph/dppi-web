@@ -3,7 +3,7 @@ include_once '../system/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
+<!--comment-->
 <!-- begin::Head --> <?php include_once 'layouts/head.php'; ?><!-- end::Head -->
 
 <!-- begin::Body -->
