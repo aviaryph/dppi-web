@@ -196,18 +196,17 @@ if($value->rowCount()>0) {
                     <div class="modal-body">
                         <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
                             <input type="hidden" name="update" />
-                            <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+                            <input type="hidden" name="id" />
                             <div class="form-group m-form__group row">
                                 <div class="col-md-12">
                                     <label>Name</label>
                                     <input type="text" name="clientName" class="form-control m-input" placeholder="Enter Client Name" required />
                                 </div>
-                              
                             </div>
                                 <div class="form-group m-form__group row">
                                 <div class="col-lg-6">
                                     <label>Contact</label>
-                                    <input type="text" class="form-control m-input" placeholder="Enter Contact" name="contact" required>
+                                    <input type="text" class="form-control m-input" placeholder="Enter Contact Number" name="contact" required>
                                 </div>
                                 <div class="col-lg-6">
                                     <label class="">TIN #</label>
