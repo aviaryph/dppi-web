@@ -110,6 +110,7 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
+                resp = JSON.parse(response);
                 if(resp.title == 'Warning'){
                     toastr.warning(resp.Message, resp.title);
                 }
