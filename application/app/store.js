@@ -110,10 +110,11 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
+                var resp = JSON.parse(response);
                 if(resp.title == 'Warning'){
                     toastr.warning(resp.Message, resp.title);
                 }
-                else{
+                else {
                     toastr.success(resp.Message, resp.title);
                     reload();
                     $('#createForm').trigger("reset");
