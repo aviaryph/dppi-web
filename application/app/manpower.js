@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).ready(function() { 
 
     //set the toastr options
     toastr.options = {
@@ -18,8 +18,7 @@ $(document).ready(function() {
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
-    };
-
+    }; 
 
     //set the datatable data
     var table = $('#m_table_1').DataTable({
@@ -31,17 +30,14 @@ $(document).ready(function() {
                 processing: '<div class="m-loader m-loader--brand m-loader--left">Loading Data</div>', // pwedeng gawing spinner style
                 'emptyTable': 'No data found'
             },
-
         "sAjaxSource": "api/manpower.php?loadTable",
         "aoColumns": [
-            {mData: 'manpowerNo'},
             {mData: 'username'},
             {mData: 'name'},
-            {mData: 'cityAddress'},
-            {mData: 'manpowerType'},
+            {mData: 'address'},
+            {mData: 'created_at'},
             {mData: 'Actions'}
-        ],
-        "aaSorting": [[3,'desc']],
+        ], 
         columnDefs: [
             {
                 targets: -1,
@@ -62,23 +58,18 @@ $(document).ready(function() {
                 },
             }
         ]
-    });
-
-
-
+    }); 
 
     //reload the table
     $("#reload").click(function () {
         reload();
     });
-
-
+ 
     //show the create modal form
     $("#createButton").click(function (e) {
         e.preventDefault();
         $('#createForm').trigger("reset");
-        $('#create').modal('show');
-        $('.modal-title').text('Create');
+        $('#create').modal('show'); 
     });
 
     //check when the update button was clicked then add the data to the textboxes
@@ -86,7 +77,7 @@ $(document).ready(function() {
         e.preventDefault();
         let id = $(this).data("id");
         $.ajax({
-            url : 'api/sampleFetch.php?record='+id,
+            url : 'api/manpower.php?record='+id,
             type: "GET",
             dataType: "JSON",
             success: function(data)
@@ -98,8 +89,8 @@ $(document).ready(function() {
                 $('[name="middlename"]').val(data.middlename);
                 $('[name="address"]').val(data.address);
                 $('[name="password"]').val(data.password);
-                $('#edit').modal('show'); // show bootstrap modal when complete loaded
-                $('.modal-title').text('Edit Record'); // Set title to Bootstrap modal title
+                $('[name="extension"]').val(data.extension);
+                $('#edit').modal('show'); // show bootstrap modal when complete loaded 
             },
             error: function (jqXHR, textStatus, errorThrown)
             {
@@ -107,9 +98,7 @@ $(document).ready(function() {
             }
         });
     });
-
-
-
+ 
     //submit the createform when everything is fine
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
@@ -132,11 +121,9 @@ $(document).ready(function() {
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
-    $(".updateForm").on("submit", function (e) {
-
+    $(".updateForm").on("submit", function (e) { 
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -150,19 +137,16 @@ $(document).ready(function() {
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");
                 $('#edit').modal('hide'); // show bootstrap modal when complete loaded
-                reload();
-
+                reload(); 
             },
             error: function(response){
                 var resp = JSON.parse(response);
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
-    $(".deleteForm").on("submit", function (e) {
-
+    $(".deleteForm").on("submit", function (e) { 
         e.preventDefault();
         $.ajax({
             type: 'POST',
@@ -182,12 +166,14 @@ $(document).ready(function() {
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
     function reload() {
         table.ajax.reload();
     }
+
+
+
 
 
 });

@@ -1,5 +1,6 @@
 
 $(document).ready(function() { 
+
     //set the toastr options
     toastr.options = {
         "closeButton": true,
@@ -18,6 +19,7 @@ $(document).ready(function() {
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     }; 
+
     //set the datatable data
     var table = $('#m_table_1').DataTable({
         responsive: true,
@@ -28,7 +30,6 @@ $(document).ready(function() {
                 processing: '<div class="m-loader m-loader--brand m-loader--left">Loading Data</div>', // pwedeng gawing spinner style
                 'emptyTable': 'No data found'
             },
-
         "sAjaxSource": "api/sampleFetch.php?loadTable",
         "aoColumns": [
             {mData: 'username'},
@@ -68,8 +69,7 @@ $(document).ready(function() {
     $("#createButton").click(function (e) {
         e.preventDefault();
         $('#createForm').trigger("reset");
-        $('#create').modal('show');
-        $('.modal-title').text('Create');
+        $('#create').modal('show'); 
     });
 
     //check when the update button was clicked then add the data to the textboxes
@@ -89,8 +89,8 @@ $(document).ready(function() {
                 $('[name="middlename"]').val(data.middlename);
                 $('[name="address"]').val(data.address);
                 $('[name="password"]').val(data.password);
-                $('#edit').modal('show'); // show bootstrap modal when complete loaded
-                $('.modal-title').text('Edit Record'); // Set title to Bootstrap modal title
+                $('[name="extension"]').val(data.extension);
+                $('#edit').modal('show'); // show bootstrap modal when complete loaded 
             },
             error: function (jqXHR, textStatus, errorThrown)
             {
@@ -121,7 +121,6 @@ $(document).ready(function() {
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
     $(".updateForm").on("submit", function (e) { 
@@ -145,7 +144,6 @@ $(document).ready(function() {
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
     $(".deleteForm").on("submit", function (e) { 
@@ -168,12 +166,14 @@ $(document).ready(function() {
                 toastr.error(resp.Message, resp.title);
             }
         });
-
     });
 
     function reload() {
         table.ajax.reload();
     }
+
+
+
 
 
 });

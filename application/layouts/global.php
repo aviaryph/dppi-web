@@ -74,3 +74,7 @@
 <!--begin::Page Vendors -->
 <script src="../public/assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script>
 <script src="../public/assets/vendors/custom/datatables/datatables.bundle.js" type="text/javascript"></script>
+
+  <!--begin::Page Scripts --> 
+    <script src="../public/assets/app/js/dashboard.js" type="text/javascript"></script>
+    <!--end::Page Scripts -->

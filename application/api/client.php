@@ -3,12 +3,11 @@ include '../../system/config.php';
 header('Access-Control-Allow-Origin: *');
 
 if(isset($_GET['loadTable'])){
-
     $xid = $_GET['loadTable'];
     $value = custom_query("SELECT * FROM tbl_client WHERE status!='Deleted' ORDER BY id DESC");
     if($value->rowCount()>0) {
         while ($r = $value->fetch(PDO::FETCH_ASSOC)) {
-            $r['Actions']=$r['id']; 
+            $r['Actions']=$r['id'];
             $data[] = $r;
         }
         $result = [
@@ -20,12 +19,11 @@ if(isset($_GET['loadTable'])){
         ];
     } else {
         $result = [
-            "sEcho" => "0",
+            "sEcho" => 0,
             "iTotalRecords" => "0",
             "iTotalDisplayRecords" => "0",
             "Error"=> "No Record Found"
         ];
-
     }
     echo json_encode($result);
 }
@@ -37,22 +35,23 @@ if(isset($_GET['record'])){
     if($value->rowCount()>0) {
         while ($r = $value->fetch(PDO::FETCH_ASSOC)) {
             $data = $r;
-        } 
+        }
         echo json_encode($data);
     }
 }
 
-if(isset($_POST['create'])){
-    $data = array(
-        "id"=>$_POST['id'], 
-        "clientName"=>$_POST['clientName'], 
+if(isset($_POST['create']) || isset($_POST['update'])){ 
+    $data = array( 
+        "clientName"=>$_POST['clientName'],
         "address"=>utf8_encode($_POST['address']),
-        "contact"=>$_POST['contact'],
-        "tinId"=>$_POST['tinId']
+        "contact"=>$_POST['contact'], 
+        "tinId"=>$_POST['tinId'], 
+        "created_at"=>date('Y-m-d h:i:s')
     );
+}
 
+if(isset($_POST['create'])){
     $insert = db_insert('tbl_client', $data);
-
     if($insert){
         $msg = array(
             "Message"=>"Record Successfully Added",
@@ -69,16 +68,9 @@ if(isset($_POST['create'])){
     echo json_encode($msg);
 }
 
-if(isset($_POST['update'])){
-    $data = array(
-       "clientName"=>$_POST['clientName'], 
-        "address"=>utf8_encode($_POST['address']),
-        "contact"=>$_POST['contact'],
-        "tinId"=>$_POST['tinId']
-    );
-
-    $insert = db_update('tbl_client', $data, $where = array("id"=>$_POST['id']));
-    if($insert){
+if(isset($_POST['update'])){ 
+    $update = db_update('tbl_client', $data, $where = array("id"=>$_POST['id']));
+    if($update){
         $msg = array(
             "Message"=>"Record Successfully Updated",
             "title"=>"Success"
@@ -90,7 +82,6 @@ if(isset($_POST['update'])){
             "title"=>"Error"
         );
     }
-
     echo json_encode($msg);
 }
 
@@ -114,8 +105,5 @@ if(isset($_POST['delete'])){
             "title"=>"Error"
         );
     }
-
     echo json_encode($msg);
 }
-
-?>
