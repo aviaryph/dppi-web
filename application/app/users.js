@@ -1,7 +1,6 @@
 
 $(document).ready(function() { 
-
-    //set the toastr options
+ 
     toastr.options = {
         "closeButton": true,
         "debug": false,
@@ -19,19 +18,19 @@ $(document).ready(function() {
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     }; 
-
-    //set the datatable data
+ 
     var table = $('#m_table_1').DataTable({
         responsive: true,
         "bInfo": true,
         "lengthChange": false,
-        "bProcessing": true,
+        "bProcessing": true, 
         language: {
                 processing: '<div class="m-loader m-loader--brand m-loader--left">Loading Data</div>', // pwedeng gawing spinner style
                 'emptyTable': 'No data found'
             },
-        "sAjaxSource": "api/sampleFetch.php?loadTable",
+        "sAjaxSource": "api/users.php?loadTable",
         "aoColumns": [
+            {mData: 'userNo'},
             {mData: 'username'},
             {mData: 'name'},
             {mData: 'address'},
@@ -59,25 +58,22 @@ $(document).ready(function() {
             }
         ]
     }); 
-
-    //reload the table
+ 
     $("#reload").click(function () {
         reload();
     });
- 
-    //show the create modal form
+  
     $("#createButton").click(function (e) {
         e.preventDefault();
         $('#createForm').trigger("reset");
         $('#create').modal('show'); 
     });
-
-    //check when the update button was clicked then add the data to the textboxes
+ 
     $("#m_table_1").delegate('.update', 'click', function (e) {
         e.preventDefault();
         let id = $(this).data("id");
         $.ajax({
-            url : 'api/sampleFetch.php?record='+id,
+            url : 'api/users.php?record='+id,
             type: "GET",
             dataType: "JSON",
             success: function(data)
@@ -90,7 +86,7 @@ $(document).ready(function() {
                 $('[name="address"]').val(data.address);
                 $('[name="password"]').val(data.password);
                 $('[name="extension"]').val(data.extension);
-                $('#edit').modal('show'); // show bootstrap modal when complete loaded 
+                $('#edit').modal('show');  
             },
             error: function (jqXHR, textStatus, errorThrown)
             {
@@ -98,13 +94,12 @@ $(document).ready(function() {
             }
         });
     });
- 
-    //submit the createform when everything is fine
+  
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'api/sampleFetch.php',
+            url: 'api/users.php',
             data: new FormData(this),
             contentType: false,
             cache: false,
@@ -114,7 +109,7 @@ $(document).ready(function() {
                 toastr.success(resp.Message, resp.title);
                 reload();
                 $('#createForm').trigger("reset");
-                $('#create').modal('hide'); // show bootstrap modal when complete loaded
+                $('#create').modal('hide');  
             },
             error: function(response){
                 var resp = JSON.parse(response);
@@ -127,7 +122,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'api/sampleFetch.php',
+            url: 'api/users.php',
             data: new FormData(this),
             contentType: false,
             cache: false,
@@ -136,7 +131,7 @@ $(document).ready(function() {
                 var resp = JSON.parse(response);
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");
-                $('#edit').modal('hide'); // show bootstrap modal when complete loaded
+                $('#edit').modal('hide');  
                 reload(); 
             },
             error: function(response){
@@ -150,7 +145,7 @@ $(document).ready(function() {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: 'api/sampleFetch.php',
+            url: 'api/users.php',
             data: new FormData(this),
             contentType: false,
             cache: false,

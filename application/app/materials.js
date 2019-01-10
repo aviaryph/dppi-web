@@ -21,6 +21,12 @@ $(document).ready(function() {
 
     //set the datatable data
     var table = $('#m_table_1').DataTable({
+         createdRow: function( row, data, dataIndex ) {
+                if ( data  == "1" ) {
+                    $( row ).css( "background-color", "Orange" );
+                    $( row ).addClass( "warning" );
+                }
+            },
         responsive: true,
         "bInfo": true,
         "lengthChange": false,
@@ -55,8 +61,10 @@ $(document).ready(function() {
                             </div>
                         </span> `;
                 },
-            }
+            },
+          
         ]
+
     }); 
 
     //reload the table
