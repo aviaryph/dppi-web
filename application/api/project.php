@@ -29,6 +29,31 @@ if(isset($_GET['loadTable'])){
     echo json_encode($result);
 }
 
+if(isset($_GET['loadTableAlloc'])){ 
+    $value = custom_query("SELECT * FROM tbl_allocation_sheet  ");
+    if($value->rowCount()>0) {
+        while ($r = $value->fetch(PDO::FETCH_ASSOC)) {
+            $r['Actions']=$r['id'];  
+            $data[] = $r;
+        }
+        $result = [
+            "sEcho" => 0,
+            "iTotalRecords" => count($data),
+            "iTotalDisplayRecords" => count($data),
+            "aaData" => $data,
+            "Error"=> "No Record Found"
+        ];
+    } else {
+        $result = [
+            "sEcho" => 0,
+            "iTotalRecords" => "0",
+            "iTotalDisplayRecords" => "0",
+            "Error"=> "No Record Found"
+        ];
+    }
+    echo json_encode($result);
+}
+
 if(isset($_GET['record'])){
     $data = array();
     $xid = $_GET['record'];
@@ -47,7 +72,18 @@ if(isset($_POST['create']) || isset($_POST['update'])){
 //     $dtFrom = new DateTime($_POST['date_covered_from']); 
 // $dtTo = new DateTime($_POST['date_covered_to']); 
   $noDays = '1';//$dtFrom->diff($dtTo); 
-    $projectNo='1';
+  //if(isset($_POST['create']){
+
+  $value = custom_query("SELECT  COUNT(*)c  FROM tbl_project ");
+    if($value->rowCount()>0) {
+        while ($r = $value->fetch(PDO::FETCH_ASSOC)) {
+ $projectNo=$r['c'];
+        }} 
+ $_SESSION['userNo']='U1'; 
+     $projectNo='DEM-'.$_SESSION['userNo'].'-'.$projectNo.'-'.date('Y');
+  // }else{
+
+  // }
  $data = array( 
         "projectNo"=>$projectNo, 
         "projectName"=>$_POST['projectName'],

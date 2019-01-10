@@ -149,7 +149,7 @@ include_once '../system/config.php';
               </div>
               <div class="col-lg-4">
                 <label class="">Teamleader</label>
-                    <select  class="form-control m-input" name="projectType" required>
+                    <select  class="form-control m-input" name="teamleader" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)teamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['teamleader'];?></option>
@@ -158,7 +158,7 @@ include_once '../system/config.php';
               </div>
               <div class="col-lg-4">
                 <label class="">Roving Team leader</label>
-                 <select  class="form-control m-input" name="projectType" required>
+                 <select  class="form-control m-input" name="rovingTeamleader" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)rovingTeamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['rovingTeamleader'];?></option>
@@ -228,6 +228,40 @@ if($sql->rowCount()>0) {
               </div>
               <div class="modal-body">
                 <h3>Are you sure you want to delete this record?</h3>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
+                <button type="submit" class="btn btn-danger"><span><i class="la la-trash"></i> </span> <span>Delete</span></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="storeBook<?= $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+          <div class="modal-content">
+            <form class="storeBookForm" data-parsley-validate="">
+              <input type="hidden" name="storeBook" />
+              <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+              <div class="modal-header">
+                <h5 id="exampleModalLabel">Store Booking</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
+
+                 <div class="form-group m-form__group row">
+              <div class="col-md-6">
+                <label>Store No.</label>
+                <input type="text" name="storeNo" class="form-control m-input" placeholder="Enter Store No" required />
+              </div>
+            </div>
+
+
+</div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
