@@ -10,10 +10,10 @@ ini_set('allow_url_include', 0);
 if(!isset($_SESSION))   {    session_start();   }
 
 function db_connect(){
-        $DB_host = "localhost";
-    $DB_user = "root";
-    $DB_pass = "";
-    $DB_name = "dppiapp";
+//        $DB_host = "localhost";
+//    $DB_user = "root";
+//    $DB_pass = "";
+//    $DB_name = "dppiapp";
 
 
     $DB_host = "sql128.main-hosting.eu";
