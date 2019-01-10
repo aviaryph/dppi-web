@@ -22,6 +22,9 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -135,6 +138,12 @@
             <path>
               <item name="dppi-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="dppi-web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="backup" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="dppi-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dppi-web" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="system" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -150,6 +159,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\dppi\dppi-web\application\backup" />
+    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -320,7 +334,7 @@
       <workItem from="1546855547989" duration="3616000" />
       <workItem from="1546867059946" duration="425000" />
       <workItem from="1546868006543" duration="2702000" />
-      <workItem from="1547063759703" duration="546000" />
+      <workItem from="1547063759703" duration="1259000" />
     </task>
     <task id="LOCAL-00001" summary="chage">
       <created>1546857287343</created>
@@ -371,11 +385,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547064243726</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added materials,project,manpower,store">
+      <created>1547064316523</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547064316523</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17384000" />
+    <option name="totallyTimeSpent" value="18097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
