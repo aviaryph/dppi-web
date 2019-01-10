@@ -69,6 +69,7 @@ include_once '../system/config.php';
           <table class="table table-striped-table-bordered table-hover table-checkable" id="m_table_1">
             <thead>
               <tr>
+                <th>User No.</th>
                 <th>Username</th>
                 <th>Name</th>
                 <th>Address</th>
@@ -117,13 +118,18 @@ include_once '../system/config.php';
         </div>
         <div class="modal-body">
           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
+ 
 
             <div class="form-group m-form__group row">
-              <div class="col-md-6">
+                  <div class="col-md-4">
+                <label>Id</label>
+                <input type="text" name="userId" class="form-control m-input" placeholder="Enter User Id" required />
+              </div>
+              <div class="col-md-4"> 
                 <label>Username</label>
                 <input type="text" name="username" class="form-control m-input" placeholder="Enter Username" required />
               </div>
-              <div class="col-md-6">
+              <div class="col-md-4">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control m-input" placeholder="Type password" required />
               </div>
@@ -149,9 +155,43 @@ include_once '../system/config.php';
             <div class="form-group m-form__group row">
               <div class="col-lg-12">
                 <label>Address</label>
-                <textarea name="address" class="form-control" data-provide="markdown" rows="10" required></textarea>
+                <textarea name="address" class="form-control" data-provide="markdown" rows="5" required></textarea>
               </div>
             </div>
+             <div class="form-group m-form__group row">
+        
+              <div class="col-md-6">
+                <label>Department</label> 
+                  <select  class="form-control m-input" name="department" required>
+                  <?php $result=db_select_fillselect('tbl_selectmo','department');
+                  for($i=1; $row = $result->fetch(); $i++){ ?>
+                    <option><?=$row['department'];?></option>
+                  <?php } ?>
+                </select>  
+              </div>
+              <div class="col-md-6">
+                <label>Position</label>
+                 <select  class="form-control m-input" name="position" required>
+                  <?php $result=db_select_fillselect('tbl_selectmo','userPosition');
+                  for($i=1; $row = $result->fetch(); $i++){ ?>
+                    <option><?=$row['userPosition'];?></option>
+                  <?php } ?>
+                </select>   
+              </div>
+              <div class="col-md-6">
+                <label>Access Level</label>
+                 <select  class="form-control m-input" name="userType" required>
+                  <?php $result=db_select_fillselect('tbl_selectmo','userType');
+                  for($i=1; $row = $result->fetch(); $i++){ ?>
+                    <option><?=$row['userType'];?></option>
+                  <?php } ?>
+                </select>   
+              </div>
+              <div class="col-md-6">
+                <label>Immediate Head</label>
+                <input type="text" name="immediateHead" class="form-control m-input" placeholder="Enter immediateHead" required />
+              </div> 
+              </div>
 
           </div>
         </div>
@@ -254,6 +294,7 @@ if($sql->rowCount()>0) {
         </div>
       </div>
     </div>
+
     <!-- end:: Modal -->
 
     <!--begin:: Global Mandatory Vendors -->  
@@ -261,7 +302,7 @@ if($sql->rowCount()>0) {
     <!--end:: Global Mandatory Vendors -->
 
     <!--begin::Page Scripts --> 
-    <script src="app/sampleTable.js" type="text/javascript"></script>
+    <script src="app/users.js" type="text/javascript"></script>
     <!--end::Page Scripts -->
 
   </body>

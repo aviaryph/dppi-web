@@ -39,10 +39,16 @@ if(isset($_GET['record'])){
         }
         echo json_encode($data);
     }
-}
+} 
 
 if(isset($_POST['create']) || isset($_POST['update'])){ 
  $data = array(
+        "userNo"=>'DEM-1',
+        "userId"=>$_POST['userId'],
+        "department"=>$_POST['department'],
+        "position"=>$_POST['position'],
+        "userType"=>$_POST['userType'],
+        "immediateHead"=>$_POST['immediateHead'],
         "username"=>$_POST['username'],
         "password"=>password_hash($_POST['password'], PASSWORD_DEFAULT),
         "firstname"=>$_POST['firstname'],

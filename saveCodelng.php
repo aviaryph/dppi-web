@@ -27,3 +27,18 @@
         }
 
     }
+
+
+
+G:\metronic-555\theme\classic\demos\default\assets\demo\custom\crud\datatables\data-sources    
+
+
+<a class="m-link" href="mailto:nfairbanks13@geocities.com">nfairbanks13@geocities.com</a>
+
+file:///G:/metronic-555/theme/classic/demos/default/crud/datatables/advanced/row-grouping.html
+ROW GROUPING
+
+
+
+file:///G:/metronic-555/theme/classic/demos/default/crud/datatables/search-options/column-search.html
+Column Search

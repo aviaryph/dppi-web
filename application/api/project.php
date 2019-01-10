@@ -44,8 +44,8 @@ if(isset($_GET['record'])){
 
  
 if(isset($_POST['create']) || isset($_POST['update'])){ 
-    $dtFrom = new DateTime($_POST['date_covered_from']); 
-$dtTo = new DateTime($_POST['date_covered_to']); 
+//     $dtFrom = new DateTime($_POST['date_covered_from']); 
+// $dtTo = new DateTime($_POST['date_covered_to']); 
   $noDays = '1';//$dtFrom->diff($dtTo); 
     $projectNo='1';
  $data = array( 
@@ -98,6 +98,24 @@ if(isset($_POST['update'])){
     }
     echo json_encode($msg);
 }
+
+if(isset($_POST['storeBook'])){
+     $insert = db_insert('tbl_project', $data);
+    if($insert){
+        $msg = array(
+            "Message"=>"Record Successfully Added",
+            "title"=>"Success"
+        );
+    }
+    else{
+        $msg = array(
+            "Message"=>"There was an error in your action",
+            "title"=>"Error"
+        );
+    }
+    echo json_encode($msg);
+}
+
 
 if(isset($_POST['delete'])){
     $data = array(

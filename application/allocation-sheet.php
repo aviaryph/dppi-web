@@ -120,7 +120,7 @@ include_once '../system/config.php';
         </div>
         <div class="modal-body">
           <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400"> 
-            
+
             <div class="form-group m-form__group row">
               <div class="col-md-6">
                 <label>Name</label>
@@ -149,16 +149,16 @@ include_once '../system/config.php';
               </div>
               <div class="col-lg-4">
                 <label class="">Teamleader</label>
-                    <select  class="form-control m-input" name="projectType" required>
+                <select  class="form-control m-input" name="teamleader" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)teamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['teamleader'];?></option>
                   <?php } ?>
                 </select>  
-              </div>
-              <div class="col-lg-4">
+              </div
+>              <div class="col-lg-4">
                 <label class="">Roving Team leader</label>
-                 <select  class="form-control m-input" name="projectType" required>
+                <select  class="form-control m-input" name="rovingTeamleader" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)rovingTeamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['rovingTeamleader'];?></option>
@@ -197,7 +197,7 @@ include_once '../system/config.php';
               <input type="date" class="form-control m-input" placeholder="Enter to" name="date_covered_to" />
             </div> 
           </div>
-  
+
         </div>
       </div>
       <div class="modal-footer">
@@ -237,71 +237,140 @@ if($sql->rowCount()>0) {
           </div>
         </div>
       </div>
-    <?php } } ?>
 
-    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <form class="updateForm" data-parsley-validate="" enctype="multipart/form-data"> 
-            <input type="hidden" name="update" />
-            <input type="hidden" name="id" value="<?= $r['id']; ?>" />
-            <div class="modal-header">
-              <h5 id="exampleModalLabel">Edit Project Record</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
+      <div class="modal fade" id="storeBook<?= $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form class="storeBookForm" data-parsley-validate="">
+              <input type="hidden" name="storeBook" />
+              <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+              <div class="modal-header">
+                <h5 id="exampleModalLabel">Store Booking Process</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
 
                  <div class="form-group m-form__group row">
-              <div class="col-md-6">
-                <label>Name</label>
-                <input type="text" name="projectName" class="form-control m-input" placeholder="Enter Name" required />
-              </div>
-              
-            <div class="form-group m-form__group row">
-             <div class="col-lg-3">
-              <label class="">No. Of Store</label>
-              <input type="number" class="form-control m-input" placeholder="1" name="numberOfStores" value="1"  />
-            </div>  
-          </div>
+                  <div class="col-md-6">
+                    <label>Name</label>
+                    <input type="text" name="projectName" class="form-control m-input" placeholder="Enter Name" required />
+                  </div>
+                </div>
 
-          <div class="form-group m-form__group row">
-            <div class="col-lg-3">
-              <label class="">Run Date </label>
-              <input type="date" class="form-control m-input" placeholder="Enter Run Date" name="runDate" />
-            </div>
-            <div class="col-lg-3">
-              <label class="">From </label>
-              <input type="date" class="form-control m-input" placeholder="Enter from" name="date_covered_from" />
-            </div>
-            <div class="col-lg-3"> 
-              <label class="">To </label>
-              <input type="date" class="form-control m-input" placeholder="Enter to" name="date_covered_to" />
-            </div> 
-          </div>
 
               </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
-              <button type="submit" class="btn btn-success"><span><i class="la la-save"></i> </span> <span>Save Changes</span></button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="fa fa-times"></i></span> <span>Cancel</span></button>
+              <button type="submit" class="btn btn-success"><span><i class="la la-save"></i><span> Save Record</span></span></button>
             </div>
           </form>
         </div>
       </div>
     </div>
-    <!-- end:: Modal -->
 
-    <!--begin:: Global Mandatory Vendors -->  
-    <?php include_once 'layouts/global.php'; ?>  
-    <!--end:: Global Mandatory Vendors -->
 
-    <!--begin::Page Scripts --> 
-    <script src="app/project.js" type="text/javascript"></script>
-    <!--end::Page Scripts -->
+          <div class="modal fade" id="allocationSheet<?= $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form class="allocationSheetForm" data-parsley-validate="">
+              <input type="hidden" name="allocationSheet" />
+              <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+              <div class="modal-header">
+                <h5 id="exampleModalLabel">Allocation Sheet Process</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
 
-  </body>
-  <!-- end::Body -->
-  </html> 
+                 <div class="form-group m-form__group row">
+                  <div class="col-md-6">
+                    <label>Name</label>
+                    <input type="text" name="projectName" class="form-control m-input" placeholder="Enter Name" required />
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="fa fa-times"></i></span> <span>Cancel</span></button>
+              <button type="submit" class="btn btn-success"><span><i class="la la-save"></i><span> Save Record</span></span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  <?php } } ?>
+
+  <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <form class="updateForm" data-parsley-validate="" enctype="multipart/form-data"> 
+          <input type="hidden" name="update" />
+          <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+          <div class="modal-header">
+            <h5 id="exampleModalLabel">Edit Project Record</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="400">
+
+             <div class="form-group m-form__group row">
+              <div class="col-md-6">
+                <label>Name</label>
+                <input type="text" name="projectName" class="form-control m-input" placeholder="Enter Name" required />
+              </div>
+              
+              <div class="form-group m-form__group row">
+               <div class="col-lg-3">
+                <label class="">No. Of Store</label>
+                <input type="number" class="form-control m-input" placeholder="1" name="numberOfStores" value="1"  />
+              </div>  
+            </div>
+
+            <div class="form-group m-form__group row">
+              <div class="col-lg-3">
+                <label class="">Run Date </label>
+                <input type="date" class="form-control m-input" placeholder="Enter Run Date" name="runDate" />
+              </div>
+              <div class="col-lg-3">
+                <label class="">From </label>
+                <input type="date" class="form-control m-input" placeholder="Enter from" name="date_covered_from" />
+              </div>
+              <div class="col-lg-3"> 
+                <label class="">To </label>
+                <input type="date" class="form-control m-input" placeholder="Enter to" name="date_covered_to" />
+              </div> 
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><span><i class="la la-times"></i></span> <span>Cancel</span></button>
+          <button type="submit" class="btn btn-success"><span><i class="la la-save"></i> </span> <span>Save Changes</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- end:: Modal -->
+
+<!--begin:: Global Mandatory Vendors -->  
+<?php include_once 'layouts/global.php'; ?>  
+<!--end:: Global Mandatory Vendors -->
+
+<!--begin::Page Scripts --> 
+<script src="app/project.js" type="text/javascript"></script>
+<!--end::Page Scripts -->
+
+</body>
+<!-- end::Body -->
+</html> 
