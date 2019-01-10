@@ -65,17 +65,18 @@ include_once '../system/config.php';
 
                <input type="text" class="form-control m-input" name="manpowerNo" value="">
 
-               <label class="col-lg-1 col-form-label">Manpower Id</label>
+               <label class="col-lg-1 col-form-label">Manpower ID</label>
                <div class="col-lg-3">
                 <div class="input-group m-input-group m-input-group--square"> 
-                  <input type="text" class="form-control m-input" name="manpowerId" placeholder="Enter Manpower Id">
+                  <input type="text" class="form-control m-input" name="manpowerId" placeholder="Enter Manpower ID">
                 </div> 
               </div> 
               <label class="col-lg-1 col-form-label">Manpower Type</label>
               <div class="col-lg-3">
                 <div class="input-group m-input-group m-input-group--square">  
              <select  class="form-control m-input" name="manpowerType">
-                                <?php $result=db_select_fillselect('tbl_manpower_type','manpowerType');
+                                <?php
+                                $result=db_select_fillselect('tbl_manpower_type','manpowerType');
                                 for($i=1; $row = $result->fetch(); $i++){ ?>
                                   <option><?=$row['manpowerType'];?></option>
                               <?php } ?>

@@ -55,33 +55,13 @@ $(document).ready(function() {
                               <i class="la la-ellipsis-h"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right">
-                                <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#storeBook`+ data +`"><i class="la la-edit"></i> Store Book</a>
-                                <a href="allocation-sheet.php?id=`+ data[0] +`"  class="dropdown-item"  ><i class="la la-edit"></i> Allocation Sheet</a>
                                 <a href="#" class="update dropdown-item" data-id="`+ data +`"><i class="la la-edit"></i> Edit Details</a> 
                                 <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#delete`+ data +`"><i class="la la-trash"></i> Delete Details</a>
                                 <a href="#" class="dropdown-item" data-target="#status" data-toggle="modal"><i class="la la-leaf"></i> Update Status</a>
                             </div>
                         </span> `;
                 },
-            },
-                  {
-                    targets: 7,
-                    render: function(data, type, full, meta) {
-                        var status = {
-                            1: {'title': 'Booked', 'class': 'm-badge--brand'},
-                            2: {'title': 'Delivered', 'class': ' m-badge--metal'},
-                            3: {'title': 'Canceled', 'class': ' m-badge--primary'},
-                            4: {'title': 'Success', 'class': ' m-badge--success'},
-                            5: {'title': 'Info', 'class': ' m-badge--info'},
-                            6: {'title': 'Danger', 'class': ' m-badge--danger'},
-                            7: {'title': 'Warning', 'class': ' m-badge--warning'},
-                        };
-                        if (typeof status[data] === 'undefined') {
-                            return data;
-                        }
-                        return '<span class="m-badge ' + status[data].class + ' m-badge--wide">' + status[data].title + '</span>';
-                    },
-                }
+            }
         ]
     }); 
 
@@ -106,7 +86,8 @@ $(document).ready(function() {
             type: "GET",
             dataType: "JSON",
             success: function(data)
-            {  
+            { 
+
                 $('[name="id"]').val(data.id);
                 $('[name="projectNo"]').val(data.projectNo);
                 $('[name="projectName"]').val(data.projectName);
@@ -119,7 +100,7 @@ $(document).ready(function() {
                 $('[name="date_covered_from"]').val(data.date_covered_from);
                 $('[name="date_covered_to"]').val(data.date_covered_to);
                 $('[name="wave"]').val(data.wave); 
-                $('#edit').modal('show');   
+                $('#edit').modal('show');  
             },
             error: function (jqXHR, textStatus, errorThrown)
             {
@@ -166,29 +147,6 @@ $(document).ready(function() {
                 toastr.info(resp.Message, resp.title);
                 $('.updateForm').trigger("reset");
                 $('#edit').modal('hide'); // show bootstrap modal when complete loaded
-                reload(); 
-            },
-            error: function(response){
-                var resp = JSON.parse(response);
-                toastr.error(resp.Message, resp.title);
-            }
-        });
-    });
-
-     $(".storeBookForm").on("submit", function (e) { 
-        e.preventDefault();
-        $.ajax({
-            type: 'POST',
-            url: 'api/projecT.php',
-            data: new FormData(this),
-            contentType: false,
-            cache: false,
-            processData: false,
-            success: function (response) {
-                var resp = JSON.parse(response);
-                toastr.info(resp.Message, resp.title);
-                $('.storeBookForm').trigger("reset");
-                $('#storeBook').modal('hide'); // show bootstrap modal when complete loaded
                 reload(); 
             },
             error: function(response){
