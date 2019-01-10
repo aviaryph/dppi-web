@@ -5,9 +5,17 @@ error_reporting(E_ALL ^ E_DEPRECATED);
 ini_set( 'error_reporting', E_ALL );
 ini_set( 'display_errors', true );
 ini_set('allow_url_include', 0);
+
+
 if(!isset($_SESSION))   {    session_start();   }
 
 function db_connect(){
+        $DB_host = "localhost";
+    $DB_user = "root";
+    $DB_pass = "";
+    $DB_name = "dppiapp";
+
+
     $DB_host = "sql128.main-hosting.eu";
     $DB_user = "u589764813_dppi";
     $DB_pass = "dppiapp";
@@ -454,7 +462,8 @@ function flash( $name = '', $message = '', $class = 'success fadeout-message' )
 $db = db_connect();
 date_default_timezone_set('Asia/Manila'); 
 $dtNow =  date('Y-m-d h:i:sa');      
-$_BASE_URL_PATH = "";
+$_BASE_URL_PATH = ""; 
+$_SESSION['company']='DEM';
  
  
 function ualt($actionTaken){ 
