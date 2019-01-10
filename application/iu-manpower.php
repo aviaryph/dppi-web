@@ -5,6 +5,7 @@ include_once '../system/config.php';
 <html lang="en">
 
 <!-- begin::Head -->
+
 <?php include_once 'layouts/head.php'; ?>
 <!-- end::Head -->
 
