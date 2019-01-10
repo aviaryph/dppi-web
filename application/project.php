@@ -107,7 +107,7 @@ include_once '../system/config.php';
 <!-- end::Scroll Top -->  
 
 <!--begin:: Add Modal -->
-<div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="create" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <form id="createForm" data-parsley-validate="" enctype="multipart/form-data"> 
@@ -123,12 +123,12 @@ include_once '../system/config.php';
             
             <div class="form-group m-form__group row">
               <div class="col-md-6">
-                <label>Name</label>
+                <label>Project Name</label>
                 <input type="text" name="projectName" class="form-control m-input" placeholder="Enter Name" required />
               </div>
               <div class="col-md-6">
                 <label>Type</label>
-                <select  class="form-control m-input" name="projectType" required>
+                <select  class="form-control m-input" id="type" name="projectType" style="width: 100%" required>
                   <?php $result=db_select_fillselect('tbl_selectmo','projectType');
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['projectType'];?></option>
@@ -140,7 +140,7 @@ include_once '../system/config.php';
             <div class="form-group m-form__group row">
               <div class="col-lg-4">
                 <label>Manpower Type</label> 
-                <select  class="form-control m-input" name="manpowerType" required>
+                <select  class="form-control m-input" id="manpower_type" style="width: 100%" name="manpowerType" required>
                   <?php $result=db_select_fillselect('tbl_manpower_type','manpowerType');
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['manpowerType'];?></option>
@@ -149,7 +149,7 @@ include_once '../system/config.php';
               </div>
               <div class="col-lg-4">
                 <label class="">Teamleader</label>
-                    <select  class="form-control m-input" name="projectType" required>
+                    <select  class="form-control m-input" id="teamleader" style="width: 100%" name="teamleader" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)teamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['teamleader'];?></option>
@@ -158,7 +158,7 @@ include_once '../system/config.php';
               </div>
               <div class="col-lg-4">
                 <label class="">Roving Team leader</label>
-                 <select  class="form-control m-input" name="projectType" required>
+                 <select  class="form-control m-input" id="rovingtl" name="rovingTeamleader" style="width: 100%" required>
                   <?php $result=custom_query("SELECT *,CONCAT(firstname,' ',lastname,' - ',userNo)rovingTeamleader FROM tbl_users");
                   for($i=1; $row = $result->fetch(); $i++){ ?>
                     <option><?=$row['rovingTeamleader'];?></option>
@@ -168,13 +168,13 @@ include_once '../system/config.php';
             </div>
 
             <div class="form-group m-form__group row">
-             <div class="col-lg-3">
+             <div class="col-lg-6">
               <label class="">No. Of Store</label>
               <input type="number" class="form-control m-input" placeholder="1" name="numberOfStores" value="1"  />
             </div> 
-            <div class="col-lg-4">
+            <div class="col-lg-6">
               <label class="">Wave </label>
-              <select  class="form-control m-input" name="wave" required>
+              <select  class="form-control m-input" style="width: 100%" id="wave" name="wave" required>
                 <?php $result=db_select_fillselect('tbl_wave','wave');
                 for($i=1; $row = $result->fetch(); $i++){ ?>
                   <option><?=$row['wave'];?></option>
@@ -184,17 +184,17 @@ include_once '../system/config.php';
           </div>
 
           <div class="form-group m-form__group row">
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <label class="">Run Date </label>
-              <input type="date" class="form-control m-input" placeholder="Enter Run Date" name="runDate" />
+              <input type="text" id="runDate" class="form-control m-input" placeholder="Enter Run Date" name="runDate" required />
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
               <label class="">From </label>
-              <input type="date" class="form-control m-input" placeholder="Enter from" name="date_covered_from" />
+              <input type="text" id="date_from" class="form-control m-input" placeholder="Enter from" name="date_covered_from" required />
             </div>
-            <div class="col-lg-3"> 
+            <div class="col-lg-4">
               <label class="">To </label>
-              <input type="date" class="form-control m-input" placeholder="Enter to" name="date_covered_to" />
+              <input type="text" id="date_to" class="form-control m-input" placeholder="Enter to" name="date_covered_to" required />
             </div> 
           </div>
   
@@ -244,7 +244,7 @@ if($sql->rowCount()>0) {
         <div class="modal-content">
           <form class="updateForm" data-parsley-validate="" enctype="multipart/form-data"> 
             <input type="hidden" name="update" />
-            <input type="hidden" name="id" value="<?= $r['id']; ?>" />
+            <input type="hidden" name="id" value="" />
             <div class="modal-header">
               <h5 id="exampleModalLabel">Edit Project Record</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">

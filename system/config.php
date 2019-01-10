@@ -27,6 +27,7 @@ function db_connect(){
         $DB_con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $DB_con;
     }
+
     catch(PDOException $e)
     {
         echo $e->getMessage();

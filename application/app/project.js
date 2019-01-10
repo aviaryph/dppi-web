@@ -1,6 +1,17 @@
 
-$(document).ready(function() { 
-
+$(document).ready(function() {
+    var arrows;
+    if (mUtil.isRTL()) {
+        arrows = {
+            leftArrow: '<i class="la la-angle-right"></i>',
+            rightArrow: '<i class="la la-angle-left"></i>'
+        }
+    } else {
+        arrows = {
+            leftArrow: '<i class="la la-angle-left"></i>',
+            rightArrow: '<i class="la la-angle-right"></i>'
+        }
+    }
     //set the toastr options
     toastr.options = {
         "closeButton": true,
@@ -61,6 +72,21 @@ $(document).ready(function() {
                             </div>
                         </span> `;
                 },
+            },
+            {
+                targets: 7,
+                render: function(data, type, full, meta) {
+                    console.log(data);
+                    var status = {
+                        'Booked': {'title': 'Booked', 'class': ' m-badge--info'},
+                        'Running': {'title': 'Running', 'class': ' m-badge--success'},
+                        'Finished': {'title': 'Finished', 'class': ' m-badge--primary'}
+                    };
+                    if (typeof status[data] === 'undefined') {
+                        return data;
+                    }
+                    return '<span class="m-badge ' + status[data].class + ' m-badge--wide">' + status[data].title + '</span>';
+                },
             }
         ]
     }); 
@@ -120,6 +146,7 @@ $(document).ready(function() {
             cache: false,
             processData: false,
             success: function (response) {
+                console.log(response);
                 var resp = JSON.parse(response);
                 toastr.success(resp.Message, resp.title);
                 reload();
@@ -181,8 +208,13 @@ $(document).ready(function() {
     function reload() {
         table.ajax.reload();
     }
-
-
+    $('#type, #manpower_type, #teamleader, #rovingtl, #wave').select2();
+    $('#runDate, #date_from, #date_to').datepicker({
+        rtl: mUtil.isRTL(),
+        todayHighlight: true,
+        orientation: "bottom left",
+        templates: arrows
+    });
 
 
 
