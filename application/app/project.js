@@ -74,6 +74,7 @@ $(document).ready(function() {
                 },
             },
             {
+
                 targets: 7,
                 render: function(data, type, full, meta) {
                     console.log(data);
