@@ -41,8 +41,8 @@ $(document).ready(function() {
                 processing: '<div class="m-loader m-loader--brand m-loader--left">Loading Data</div>', // pwedeng gawing spinner style
                 'emptyTable': 'No data found'
             },
-            "sAjaxSource": "api/project.php?loadTable",
-            "aoColumns": [
+        "sAjaxSource": "api/projecT.php?loadTable",
+        "aoColumns": [
             {mData: 'projectNo'},
             {mData: 'projectName'},
             {mData: 'projectType'},
@@ -52,27 +52,25 @@ $(document).ready(function() {
             {mData: 'dateCovered'}, 
             {mData: 'status'},
             {mData: 'created_at'},
-            {mData: 'Actions'} 
-            ], 
-            columnDefs: [
-            { 
+            {mData: 'Actions'}
+        ], 
+        columnDefs: [
+            {
                 targets: -1,
                 title: 'Actions',
                 orderable: false,
                 render: function(data, type, full, meta) {
                     return `
-                    <span class="dropdown">
-                    <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" aria-expanded="true">
-                    <i class="la la-ellipsis-h"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                    <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#storeBook`+ data +`"><i class="la la-edit"></i> Store Booking</a>
-                    <a target="_blank" href="allocation-sheet.php?id=`+ data[0] +`"  class="dropdown-item" ><i class="la la-edit"></i> Allocation Sheet</a>
-                    <a href="#" class="update dropdown-item" data-id="`+ data +`"><i class="la la-edit"></i> Edit Details</a> 
-                    <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#delete`+ data +`"><i class="la la-trash"></i> Delete Details</a>
-                    <a href="#" class="dropdown-item" data-target="#status" data-toggle="modal"><i class="la la-leaf"></i> Update Status</a>
-                    </div>
-                    </span> `;
+                        <span class="dropdown">
+                            <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" aria-expanded="true">
+                              <i class="la la-ellipsis-h"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="update dropdown-item" data-id="`+ data +`"><i class="la la-edit"></i> Edit Details</a> 
+                                <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#delete`+ data +`"><i class="la la-trash"></i> Delete Details</a>
+                                <a href="#" class="dropdown-item" data-target="#status" data-toggle="modal"><i class="la la-leaf"></i> Update Status</a>
+                            </div>
+                        </span> `;
                 },
             },
             {
@@ -90,67 +88,20 @@ $(document).ready(function() {
                     return '<span class="m-badge ' + status[data].class + ' m-badge--wide">' + status[data].title + '</span>';
                 },
             }
-            ]
-        }); 
-
-    var table = $('#m_table_alloc').DataTable({
-        responsive: true,
-        "bInfo": true,
-        "lengthChange": false,
-        "bProcessing": true,
-        language: {
-                processing: '<div class="m-loader m-loader--brand m-loader--left">Loading Data</div>', // pwedeng gawing spinner style
-                'emptyTable': 'No data found'
-            },
-            "sAjaxSource": "api/project.php?loadTableAlloc",
-            "aoColumns": [
-            {mData: 'projectNo'},
-            {mData: 'quantity'},
-            {mData: 'unit'},
-            {mData: 'itemDescription'}, 
-            {mData: 'created_at'},
-            {mData: 'Actions'}
-            ], 
-            columnDefs: [
-            {
-                targets: -1,
-                title: 'Actions',
-                orderable: false,
-                render: function(data, type, full, meta) {
-                    return `
-                    <span class="dropdown">
-                    <a href="#" class="btn m-btn m-btn--hover-brand m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown" aria-expanded="true">
-                    <i class="la la-ellipsis-h"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right"> 
-                    <a href="#"  class="dropdown-item"  data-toggle="modal" data-target="#delete`+ data +`"><i class="la la-trash"></i> Delete Details</a> 
-                    </div>
-                    </span> `;
-                },
-            },
-            
-            ]
-        }); 
-
+        ]
+    }); 
 
     //reload the table
     $("#reload").click(function () {
         reload();
     });
-
+ 
     //show the create modal form
     $("#createButton").click(function (e) {
         e.preventDefault();
         $('#createForm').trigger("reset");
         $('#create').modal('show'); 
     });
-
-       $("#newMaterialButton").click(function (e) {
-        e.preventDefault();
-        $('#newMaterialForm').trigger("reset");
-        $('#newMaterial').modal('show'); 
-    });
-
 
     //check when the update button was clicked then add the data to the textboxes
     $("#m_table_1").delegate('.update', 'click', function (e) {
@@ -183,7 +134,7 @@ $(document).ready(function() {
             }
         });
     });
-
+ 
     //submit the createform when everything is fine
     $("#createForm").on("submit", function (e) {
         e.preventDefault();
